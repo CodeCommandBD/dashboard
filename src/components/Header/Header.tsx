@@ -17,7 +17,7 @@ const Header = async () => {
   console.log(user,'user');
   
   return (
-    <header className='bg-white py-4 border-b border-b-black/20'>
+    <header className='bg-white py-4 '>
       <Container className='flex items-center justify-between   '>
 
         <div className='w-full md:w-1/3 flex items-center gap-x-5 justify-start md:gap-0'>

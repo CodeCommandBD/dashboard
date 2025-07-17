@@ -1,9 +1,13 @@
+import Container from '@/components/Container/Container'
+import Hero from '@/components/Hero/Hero'
 import React from 'react'
 
 const Homepage = () => {
   return (
     <div>
-      <h2>Home</h2>
+      <Container>
+        <Hero></Hero>
+      </Container>
     </div>
   )
 }
