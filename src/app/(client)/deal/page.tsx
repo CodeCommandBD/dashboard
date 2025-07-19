@@ -1,0 +1,27 @@
+
+import Container from "@/components/Container/Container";
+import ProductCard from "@/components/ProductCard/ProductCard";
+import { Title } from "@/components/Text/Text";
+import { getDealProducts } from "@/sanity/quaries";
+import React from "react";
+
+const DealPage = async () => {
+  const products = await getDealProducts();
+  return (
+    <div className="py-10 bg-deal-bg">
+      <Container>
+        <Title className="mb-5 underline underline-offset-4 decoration-[1px] text-base uppercase tracking-wide">
+          Hot Deals of the Week
+        </Title>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2.5">
+          {products?.map((product) => (
+            // @ts-expect-error ProductCard expects a different prop name
+            <ProductCard key={product?._id} products={product} />
+          ))}
+        </div>
+      </Container>
+    </div>
+  );
+};
+
+export default DealPage;

@@ -6,7 +6,7 @@ import Link from 'next/link'
 const HeaderManu = () => {
     const pathname = usePathname()
     return (
-        <div className='hidden md:flex items-center gap-x-7 text-sm capitalize font-semibold text-lightColor w-1/3'>
+        <div className='hidden md:flex items-center justify-center gap-x-7 text-sm capitalize font-semibold text-lightColor w-1/3'>
             {
                 headerData?.map((navitem) => (
                     <Link className={`hover:text-shop_light_green relative group transition-all duration-300 ${pathname === navitem?.href && "text-shop_light_green"}`} key={navitem?.title} href={navitem?.href}>{navitem?.title}
