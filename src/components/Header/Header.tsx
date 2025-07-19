@@ -38,7 +38,7 @@ const Header = async () => {
         <HeaderManu></HeaderManu>
         {/* loging buttons */}
         <div className='flex items-center justify-end gap-x-4 w-auto md:w-1/3'>
-          <Searchbar></Searchbar>
+          <Searchbar ></Searchbar>
           <Cart></Cart>
           <Favorite></Favorite>
           {user && (
